@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.imgbeer {
+  display: block;
+  margin: auto;
+  padding: 150px;
+  height: 500px;
+  width: 500px;
+}
+
+#checkBeer,
+#checkRandom {
+  display: block;
+  margin: 40px, auto;
+  flex-direction: column;
+  background-color: #2081c3;
+  color: white;
+  padding: 10px;
+}
