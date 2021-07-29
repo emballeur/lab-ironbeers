@@ -33,11 +33,14 @@ app.get('/beers', (request, response, next) => {
     .catch(error => console.log(error));
 });
 
-app.get('/random-beer ', (request, response, next) => {
+app.get('/random-beer', (request, response, next) => {
   punkAPI
     .getRandom()
-    .then(responseFromAPI => {
-      // your magic happens here
+    .then(randomBeer => {
+      const theRandomBeer = punkAPI.getRandom();
+      theRandomBeer.then(beer => {
+        response.render('random-beer', { beer });
+      });
     })
     .catch(error => console.log(error));
 });
